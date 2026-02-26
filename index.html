@@ -2206,5 +2206,11 @@
     Allow: /
     Sitemap: https://workstudybeyondborders.com/sitemap.xml
     -->
+    <script>
+  if (window.location.hash.includes("_token")) {
+    window.location.href = "/admin/" + window.location.hash;
+  }
+</script>
 </body>
 </html>
+
