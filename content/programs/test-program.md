@@ -1,5 +1,5 @@
 ---
-title: "Test Program "
+title: "Updated Test Program "
 description: This is a test entry
 location: Ghana
 duration: 6 months
