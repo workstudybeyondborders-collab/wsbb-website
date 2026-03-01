@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+title: Programs
+permalink: /programs/
+---
+<h1>Our Programs</h1>
+{% for program in collections.programs %}
+  <article>
+    <h2><a href="{{ program.url }}">{{ program.data.title }}</a></h2>
+    <p>{{ program.data.location }}</p>
+  </article>
+{% endfor %}
