@@ -1936,56 +1936,50 @@
         });
 
         // Blog Data
-        const blogPosts = [
-            {
-                id: 1,
-                category: 'visa',
-                title: 'Top 5 Countries with Easiest Student Visa Processes for Africans',
-                excerpt: 'Discover which countries offer the most straightforward visa application procedures and learn tips to improve your approval chances.',
-                date: 'Feb 20, 2026',
-                image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800'
-            },
-            {
-                id: 2,
-                category: 'study',
-                title: 'How to Choose the Right Study Program Abroad',
-                excerpt: 'A comprehensive guide to selecting programs that match your career goals, budget, and lifestyle preferences.',
-                date: 'Feb 18, 2026',
-                image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800'
-            },
-            {
-                id: 3,
-                category: 'work',
-                title: 'High-Demand Jobs for African Professionals in Europe',
-                excerpt: 'Industries actively recruiting skilled workers from Africa and what qualifications you need to get hired.',
-                date: 'Feb 15, 2026',
-                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800'
-            },
-            {
-                id: 4,
-                category: 'study',
-                title: 'Scholarship Opportunities for Nigerian Students in 2026',
-                excerpt: 'Complete list of available scholarships, eligibility criteria, and application deadlines you shouldn\'t miss.',
-                date: 'Feb 12, 2026',
-                image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800'
-            },
-            {
-                id: 5,
-                category: 'visa',
-                title: 'Common Visa Interview Questions and How to Answer Them',
-                excerpt: 'Prepare for your visa interview with expert answers to the most frequently asked questions by immigration officers.',
-                date: 'Feb 10, 2026',
-                image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800'
-            },
-            {
-                id: 6,
-                category: 'work',
-                title: 'The Ultimate Guide to Working in Canada from Nigeria',
-                excerpt: 'Everything you need to know about work permits, job hunting, and settling in Canada as a Nigerian professional.',
-                date: 'Feb 8, 2026',
-                image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800'
-            }
-        ];
+       const blogPosts = [];
+
+// Fetch real blog posts from GitHub
+async function fetchBlogPosts() {
+    try {
+        const res = await fetch('https://api.github.com/repos/workstudybeyondborders-collab/wsbb-website/contents/content/blog');
+        const files = await res.json();
+        const mdFiles = files.filter(f => f.name.endsWith('.md'));
+        
+        for (const file of mdFiles) {
+            const raw = await fetch(file.download_url);
+            const text = await raw.text();
+            const parts = text.split('---');
+            const meta = parts[1] || '';
+            const body = parts.slice(2).join('---');
+            
+            const titleMatch = meta.match(/title:\s*["']?(.+?)["']?\s*$/m);
+            const dateMatch = meta.match(/date:\s*["']?(.+?)["']?\s*$/m);
+            const imageMatch = meta.match(/image:\s*["']?(.+?)["']?\s*$/m);
+            
+            const title = titleMatch ? titleMatch[1].replace(/['"]/g, '') : file.name;
+            const date = dateMatch ? new Date(dateMatch[1]).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'}) : '';
+            const image = imageMatch ? imageMatch[1].replace(/['"]/g, '') : 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800';
+            const excerpt = body.replace(/[#*\[\]()]/g, '').trim().substring(0, 150) + '...';
+            const slug = file.name.replace('.md', '');
+            
+            blogPosts.push({
+                id: blogPosts.length + 1,
+                category: 'all',
+                title: title,
+                excerpt: excerpt,
+                date: date,
+                image: image,
+                url: '/blog/' + slug + '/'
+            });
+        }
+        
+        renderBlogPosts();
+    } catch(err) {
+        console.error('Error fetching posts:', err);
+    }
+}
+
+fetchBlogPosts();
 
         let displayedPosts = 3;
         let currentCategory = 'all';
@@ -2010,7 +2004,7 @@
                         </div>
                         <h3>${post.title}</h3>
                         <p class="blog-excerpt">${post.excerpt}</p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="${post.url}" class="read-more">Read More →</a>
                     </div>
                 </div>
             `).join('');
@@ -2055,7 +2049,6 @@
         });
 
         // Initialize blog
-        renderBlogPosts();
 
         // Form Validation & Submission
         const contactForm = document.getElementById('contactForm');
@@ -2213,4 +2206,5 @@
 </script>
 </body>
 </html>
+
 
