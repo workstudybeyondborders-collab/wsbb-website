@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: workstudybeyondborders-collab/wsbb-website
   branch: main
 
 media_folder: "images/uploads"
