@@ -1,13 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - WSBB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - WSBB</title>
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-dark: #0f2137;
+            --navy-light: #2d4a7c;
+            --orange: #f97316;
+            --orange-dark: #ea580c;
+            --white: #ffffff;
+            --gray-light: #f8fafc;
+            --gray: #64748b;
+            --gray-dark: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-dark);
+            background: var(--white);
+        }
+
+        /* About Page */
+        .about-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 8rem 5% 5rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .about-hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .about-hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+        }
+
+        .mvv-section {
+            padding: 5rem 5%;
+            background: var(--gray-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .mvv-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border-top: 4px solid var(--orange);
+            transition: transform 0.3s ease;
+        }
+
+        .mvv-card:hover { transform: translateY(-5px); }
+
+        .mvv-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .mvv-card h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .mvv-card p { color: var(--gray); line-height: 1.8; }
+
+        .values-list { list-style: none; padding: 0; color: var(--gray); line-height: 2; }
+
+        .values-list li::before { content: "✓ "; color: var(--orange); font-weight: 700; }
+    </style>
 </head>
 <body>
-  <main>
-    {{ content | safe }}
-  </main>
+    <main>
+        {{ content | safe }}
+    </main>
 </body>
 </html>
