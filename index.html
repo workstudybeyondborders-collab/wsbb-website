@@ -507,56 +507,60 @@
             margin: 0 auto;
         }
 
-        .service-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.6s ease;
-            opacity: 0;
-            transform: translateY(30px);
-        }
+       .service-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .service-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
 
-        .service-card:nth-child(1) { transition-delay: 0.1s; }
-        .service-card:nth-child(2) { transition-delay: 0.2s; }
-        .service-card:nth-child(3) { transition-delay: 0.3s; }
-        .service-card:nth-child(4) { transition-delay: 0.4s; }
-        .service-card:nth-child(5) { transition-delay: 0.5s; }
-        .service-card:nth-child(6) { transition-delay: 0.6s; }
+.sc-study  { background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80') center/cover no-repeat; }
+.sc-visa   { background: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80') center/cover no-repeat; }
+.sc-talent { background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80') center/cover no-repeat; }
+.sc-docs   { background: url('https://images.unsplash.com/photo-1568219557405-376e23e4f7cf?w=800&q=80') center/cover no-repeat; }
+.sc-depart { background: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=80') center/cover no-repeat; }
+.sc-ongoing{ background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80') center/cover no-repeat; }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
+.sc-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,33,55,0.93) 40%, rgba(15,33,55,0.25) 100%);
+}
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--orange), var(--orange-light));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
+.sc-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: var(--white);
+}
 
-        .service-card h3 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
 
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.7;
-        }
+.service-card h3 {
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
 
+.service-card p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
         /* Industries Section */
         .industries {
             padding: 80px 5%;
