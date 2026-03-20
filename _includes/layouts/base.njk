@@ -102,7 +102,22 @@
     </style>
 </head>
 <body>
+    <header class="page-header">
+        <nav class="page-nav">
+            <a href="/" class="nav-logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/55eab5ec-1955-418c-8c36-13523fd5045c" alt="WSBB Logo" height="60">
+                <span class="nav-brand">Work &amp; Study<br>Beyond Borders</span>
+            </a>
+            <ul class="page-nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
+
         {{ content | safe }}
     </main>
 </body>
