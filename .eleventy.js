@@ -14,6 +14,13 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/programs/*.md");
   });
 
+  // Date filter for sitemap.njk
+  eleventyConfig.addFilter("date", function(value, format = "yyyy-MM-dd") {
+    if (!value) return "";
+    const d = new Date(value);
+    return d.toISOString().slice(0, 10);
+  });
+
   return {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
