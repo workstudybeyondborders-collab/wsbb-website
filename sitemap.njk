@@ -8,7 +8,6 @@ layout: null
 {% if not page.data.excludeFromSitemap %}
 <url>
   <loc>https://workstudybeyondborders.com{{ page.url }}</loc>
-  <lastmod>{{ page.date | date("yyyy-MM-dd") }}</lastmod>
   <changefreq>{{ page.data.changefreq or "monthly" }}</changefreq>
   <priority>{{ page.data.priority or "0.8" }}</priority>
 </url>
