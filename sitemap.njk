@@ -1,0 +1,18 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in collections.all %}
+{% if not page.data.excludeFromSitemap %}
+<url>
+  <loc>https://workstudybeyondborders.com{{ page.url }}</loc>
+  <lastmod>{{ page.date | date("yyyy-MM-dd") }}</lastmod>
+  <changefreq>{{ page.data.changefreq or "monthly" }}</changefreq>
+  <priority>{{ page.data.priority or "0.8" }}</priority>
+</url>
+{% endif %}
+{% endfor %}
+</urlset>
