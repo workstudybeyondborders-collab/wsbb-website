@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://wsbb-website.workstudybeyondborders.workers.dev/</loc>
+    <loc>https://workstudybeyondborders.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://wsbb-website.workstudybeyondborders.workers.dev/content/blog/2026-02-27-5-things-you-were-not-told-about-working-overseas/</loc>
+    <loc>https://workstudybeyondborders.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://workstudybeyondborders.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
