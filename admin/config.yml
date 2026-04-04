@@ -32,5 +32,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text", hint: "Keep between 150–160 characters for best SEO results", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
