@@ -124,7 +124,7 @@ _---_
 
 You have read the facts. You have seen the numbers, the salary, the housing, the healthcare, the legal pathway. The only thing standing between you and that CPR number is one honest conversation.
 
-Book your FREE consultation with WSBB today and let us tell you exactly whether this path is right for you. No pressure, no vague promises. Just a clear look at your profile and your options.
+Book your **FREE** consultation with WSBB today and let us tell you exactly whether this path is right for you. No pressure, no vague promises. Just a clear look at your profile and your options.
 
 Your Denmark story starts with one message
 
