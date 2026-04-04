@@ -109,7 +109,7 @@ The Denmark paid internship is one of the most financially sound ways to go abro
 
 Before you DM us or book a consultation, fill out the quick eligibility form below. It takes less than two minutes, and it helps us give you a faster, more accurate response when we follow up.
 
-Click here to fill out the WSBB Denmark Internship Eligibility Form https://forms.gle/kFCk3zmoYQ2ucW7B8
+Click here to fill out the WSBB Denmark Internship Eligibility Form https://forms.gle/kFCk3zmoYQ2ucW7B8 
 
 ***
 
