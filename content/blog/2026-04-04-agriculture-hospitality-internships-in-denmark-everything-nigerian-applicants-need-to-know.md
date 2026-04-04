@@ -114,7 +114,7 @@ Before you DM us or book a consultation, fill out the quick eligibility form bel
 
 Click here to fill out the WSBB Denmark Internship Eligibility Form https://forms.gle/kFCk3zmoYQ2ucW7B8
 
----
+***
 
 _The form asks: your name, age, email, phone number, program of interest (Agriculture or Hospitality), educational background, and one short question about your work experience. All entries are reviewed by the WSBB team within 48 hours._
 
@@ -128,7 +128,7 @@ Book your FREE consultation with WSBB today and let us tell you exactly whether 
 
 Your Denmark story starts with one message
 
----
+***
 
 _Work & Study Beyond Borders (WSBB) is a Nigerian-led education and global talent agency helping African students and professionals access real international opportunities, from choosing the right program to landing legally in Europe._
 
