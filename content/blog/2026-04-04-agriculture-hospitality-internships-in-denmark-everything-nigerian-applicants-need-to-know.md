@@ -3,10 +3,7 @@ layout: layouts/post.njk
 title: 'Agriculture & Hospitality Internships in Denmark: Everything Nigerian Applicants Need to Know'
 date: 2026-04-04T11:29:00
 author: Rachael Lawrence
-description: |-
-  Everything Nigerian applicants need to know about paid
-  agriculture and hospitality internships in Denmark — eligibility, salaries, visa steps, and how WSBB guides you from start
-  to finish.
+description: Everything Nigerian applicants need to know about paid Agriculture and Hospitality internships in Denmark — eligibility, salaries, visa steps, and how WSBB guides you from start to finish.
 image: /images/uploads/Denmark Landscape.png
 ---
 
@@ -117,8 +114,6 @@ Click here to fill out the WSBB Denmark Internship Eligibility Form https://form
 ***
 
 _The form asks: your name, age, email, phone number, program of interest (Agriculture or Hospitality), educational background, and one short question about your work experience. All entries are reviewed by the WSBB team within 48 hours._
-
-_---_
 
 ## Stop Researching. Start Moving.
 
