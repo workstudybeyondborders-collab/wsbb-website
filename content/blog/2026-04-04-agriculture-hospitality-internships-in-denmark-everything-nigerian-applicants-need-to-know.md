@@ -75,7 +75,7 @@ Not everyone will qualify for every program, and at WSBB we would rather tell yo
 
 _If you are not sure whether your profile fits, that is exactly what our free consultation is for. We will be straight with you. If Denmark is not the right fit right now, we will tell you and help you find the path that is._
 
-### The Visa and Permit Process (Simplified)
+## The Visa and Permit Process (Simplified)
 
 We know the word "visa" makes most people nervous. Here is the honest truth: the process is very manageable when someone walks you through it step by step. This is exactly what we do at WSBB.
 
@@ -126,5 +126,3 @@ Your Denmark story starts with one message
 ***
 
 _Work & Study Beyond Borders (WSBB) is a Nigerian-led education and global talent agency helping African students and professionals access real international opportunities, from choosing the right program to landing legally in Europe._
-
-_---_
