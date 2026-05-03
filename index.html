@@ -1696,7 +1696,20 @@
                 <button class="category-btn" data-category="work">Work Abroad</button>
             </div>
         </div>
-        <div class="blog-grid" id="blogGrid">
+      <div class="blog-grid" id="blogGrid">
+  {% for post in collections.blog | reverse %}
+    {% if loop.index <= 3 %}
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.date | date }}</p>
+          <p>{{ post.data.description }}</p>
+          <a href="{{ post.url }}" class="read-more">Read More →</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div> 
            
         </div>
         <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
