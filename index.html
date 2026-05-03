@@ -1697,11 +1697,24 @@
             </div>
         </div>
         <div class="blog-grid" id="blogGrid">
-            <!-- Blog posts will be dynamically loaded -->
+           
         </div>
         <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
     </section>
-
+<div class="blog-grid">
+  {% for post in collections.blog | reverse %}
+    {% if loop.index <= 3%}
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.date | date }}</p>
+          <p>{{ post.data.description }}</p>
+          <a href="{{ post.url }}" class="read-more">Read More →</a>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="section-header">
@@ -1989,15 +2002,7 @@
             });
         });
 
-      {% for post in collections.posts | reverse %}
-  {% if loop.index <= 3 %}
-    <article class="blog-card">
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p>{{ post.date | date }}</p>
-      <p>{{ post.data.description }}</p>
-    </article>
-  {% endif %}
-{% endfor %}
+     
         const files = await res.json();
         const mdFiles = files.filter(f => f.name.endsWith('.md'));
         
